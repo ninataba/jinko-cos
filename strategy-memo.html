@@ -177,15 +177,15 @@
     <div class="kicker">Chief of Staff — Candidate Submission</div>
     <h1 class="title">90-Day Plan &amp; Support Model for Jinko</h1>
     <dl class="meta-grid">
-      <dt>Prepared for</dt><dd>Sébastien &amp; Kevin, Co-Founders, Jinko (YC W26)</dd>
+      <dt>Prepared for</dt><dd>Kevin, Head of Product &amp; GTM (direct debrief) — cc Sébastien, Co-Founder Supply/Tech</dd>
       <dt>Prepared by</dt><dd>Nina Tabaka, Candidate — Chief of Staff</dd>
       <dt>Date</dt><dd>September 8, 2026</dd>
     </dl>
-    <span class="rev-badge">↻ v2 — revised after founder review</span>
+    <span class="rev-badge">↻ v3 — revised after founder review</span>
   </header>
 
   <div class="lede">
-    <b>How to read this document:</b> Part 0 is the operating model — how the Chief of Staff role converts founder alignment into execution capacity. Part 1 is the 90-day GTM plan I'd run starting Day 1. Part 2 is the support model that scales <i>alongside</i> Part 1: hands-on and manual for the first 50–100 bookings while I build the real playbook, then handed to a hybrid AI + BPO system once the actual failure modes are understood — not a BPO stack built in advance on guesses.
+    <b>How to read this document:</b> Part 0 is the operating model — how the Chief of Staff role extends founder bandwidth. Part 1 is the 90-day GTM plan I'd run starting Day 1, built on where Jinko's Builder Platform relationships actually stand today — signed, warm, and cold. Part 2 is the support model that scales <i>alongside</i> Part 1: hands-on and manual for the first 50–100 bookings while the team builds the real playbook, then handed to a hybrid AI + BPO system once the actual failure modes are understood.
   </div>
 
   <nav class="toc">
@@ -200,10 +200,10 @@
     <div class="part-eyebrow">Part 0</div>
     <h2>Executive Summary &amp; Founder Alignment</h2>
 
-    <p class="wide"><strong>The Chief of Staff role exists to convert founder alignment into execution capacity.</strong> Sébastien and Kevin's shared history gives Jinko a strong, aligned sense of where the business needs to go. As Jinko scales, the CoS role converts high-level founder synergy into distinct operational swimlanes, preventing context-switching — GTM execution and support ops become one dedicated swimlane, run day-to-day by the CoS, so both founders stay focused on what only they can do.</p>
+    <p class="wide"><strong>The Chief of Staff role exists to extend founder bandwidth, not resolve founder friction.</strong> Sébastien has confirmed that founder decision-making at Jinko is already collegial and the Supply/Product swimlanes are well-coordinated — this plan isn't fixing a coordination problem that doesn't exist. As Jinko scales, the CoS role extends founder bandwidth, institutionalizing operational execution across GTM and Support Ops so Kevin remains focused on core Product strategy. The CoS takes full day-to-day ownership of GTM execution and support ops as a dedicated operating swimlane — an operational force multiplier, freeing founder time for what only founders can do.</p>
 
-    <h3>Founder Focus vs. CoS Operational Leverage</h3>
-    <p class="wide">The CoS is not a layer above the founders — it's a lateral execution engine reporting directly to Kevin, taking GTM execution and Support Ops off his plate so he can stay focused on Product. Sébastien remains a peer swimlane; the CoS exchanges supply data and escalations with him directly, without needing Kevin in the loop for every handoff.</p>
+    <h3>Reporting Line &amp; Org Positioning</h3>
+    <p class="wide">The CoS is a <strong>direct report to Kevin</strong> and a lateral execution engine for his GTM vision — not a layer above either founder, and not a mechanism for adjudicating between them. Kevin delegates GTM execution and Support Ops so he can stay focused on Product; Sébastien remains a peer swimlane, exchanging supply data and escalations directly with the CoS without needing Kevin in the loop for every handoff.</p>
 
     <div class="diagram">
       <pre class="mermaid">
@@ -215,11 +215,11 @@ flowchart TB
         K3["Investor &amp; board narrative"]
     end
 
-    subgraph COS["⚙️ CHIEF OF STAFF — Nina (reports to Kevin)"]
+    subgraph COS["⚙️ CHIEF OF STAFF — Nina (direct report to Kevin)"]
         direction TB
         C1["Executes 90-day Builder Platform GTM"]
         C2["Owns support ops &amp; unit economics"]
-        C3["Kills redundant solution design across swimlanes"]
+        C3["Extends founder bandwidth on execution"]
     end
 
     subgraph SEB["🔧 SÉBASTIEN — Supply &amp; Tech"]
@@ -246,7 +246,7 @@ flowchart TB
     <div class="callout kevin">
       <span class="icon">🚀</span>
       <div>
-        <p><strong>Aligning with Kevin's commercial vision — executing a sharp, concentrated bet on Builder Platforms via MCP.</strong> The GTM plan spends 80% of energy on one segment and explicitly excludes Enterprise/Mid-Market RFPs, which are too slow and too founder-time-intensive for this window. The North Star Metric is a production commitment, not a vanity metric like signups or stars — it's the number that proves willingness to pay, not willingness to try.</p>
+        <p><strong>Aligning with Kevin's GTM vision — executing a sharp, concentrated bet on Builder Platforms via MCP.</strong> The GTM plan spends 80% of energy on this segment and explicitly excludes Enterprise/Mid-Market RFPs, which are too slow and too founder-time-intensive for this window. The North Star Metric is a production commitment, not a vanity metric like signups or stars — it's the number that proves willingness to pay, not willingness to try.</p>
       </div>
     </div>
   </section>
@@ -257,8 +257,21 @@ flowchart TB
     <div class="part-eyebrow">Part 1</div>
     <h2>90-Day Go-To-Market Strategy</h2>
 
+    <h3>Partner Segmentation: Where Jinko Actually Stands Today</h3>
+    <p class="wide">The 90-day plan is built on the <i>real</i> state of each relationship, not a flat list of logos — treating a signed partner like a cold lead (or a warm one like a stranger) wastes the exact founder bandwidth this role exists to protect.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Tier</th><th>Platform</th><th>Status</th><th>90-Day Job</th></tr></thead>
+        <tbody>
+          <tr><td class="row-label"><span class="pill low">Signed</span></td><td>Exa</td><td>Already a signed partner</td><td>Operationalize into production — convert the signature into real, measured GMV</td></tr>
+          <tr><td class="row-label"><span class="pill med">Warm</span></td><td>Lovable</td><td>Active — Jinko already co-hosted a hackathon with them</td><td>Convert warmth into a deeper technical integration + joint co-marketing, not cold outreach</td></tr>
+          <tr><td class="row-label"><span class="pill info">Cold</span></td><td>Replit, Vercel AI, Bolt.new + 2–3 second-tier</td><td>Net-new, no prior contact</td><td>Cold outreach motion (Asset 1) — builds the pipeline behind Exa and Lovable</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <h3>Focus: Builder Platforms via MCP (80% of energy allocation)</h3>
-    <p class="wide">We are not selling to individual developers. We are selling to the <strong>platforms developers already build on</strong> — Lovable, Replit, Vercel AI, Exa.ai (and their MCP/tool ecosystems) — so that every app built on top of them inherits Jinko as the default travel primitive. One integration, thousands of downstream apps. <strong>Expected sales cycle: 2–4 months</strong> per platform, from first contact to production default-integration status. The remaining 20% of energy goes to opportunistic inbound and existing pipeline maintenance — not to a second GTM motion.</p>
+    <p class="wide">We are not selling to individual developers. We are selling to the <strong>platforms developers already build on</strong> — and the 90-day job is different for each tier above. <strong>Expected sales cycle: 2–4 months</strong> per platform, first contact to production — which is exactly why Exa and Lovable, both already ahead of that clock, anchor the Day-90 North Star, while the cold motion targets Month 4+ conversions. The remaining 20% of energy goes to opportunistic inbound and existing pipeline maintenance.</p>
 
     <h3>Strategic Moat: Native API vs. "Browser-Use" Failure Modes</h3>
     <div class="table-wrap">
@@ -280,10 +293,10 @@ flowchart TB
     <div class="callout north-star">
       <span class="icon">🎯</span>
       <div>
-        <p><strong>North Star (Day 90):</strong> 1 Builder Platform live in production running Jinko as its DEFAULT travel integration, plus 1 additional platform in technical beta/trial — collectively driving <strong>&gt;€150,000 in GMV</strong> (generating <strong>&gt;€10,000 in net Jinko revenue</strong>).</p>
+        <p><strong>North Star (Day 90):</strong> Exa (signed) live in production running Jinko as its DEFAULT travel integration, plus Lovable (warm) advanced to technical beta/trial — collectively driving <strong>&gt;€150,000 in GMV</strong> (generating <strong>&gt;€10,000 in net Jinko revenue</strong>). In parallel, cold outreach to 5–8 net-new platforms builds the pipeline for Q2.</p>
       </div>
     </div>
-    <p class="wide">Two platforms fully in production by Day 90 doesn't square with a 2–4 month sales cycle that starts at Day 1 — one live, one in trial is the honest version of the same ambition. GMV and net revenue are reported separately on purpose: GMV (traveler-facing transaction value) proves real usage; net revenue (Jinko's take) is what actually funds the business — conflating the two overstates what's in the bank.</p>
+    <p class="wide">Exa and Lovable anchor the North Star because they're already ahead of a fresh 2–4 month sales cycle — a cold-started relationship realistically can't clear "production" by Day 90, so the honest target leans on the relationships that already exist. GMV and net revenue are reported separately on purpose: GMV (traveler-facing transaction value) proves real usage; net revenue (Jinko's take) is what actually funds the business.</p>
     <div class="callout">
       <span class="icon">📊</span>
       <div><p><strong>Secondary Metric:</strong> Hotel booking mix ≥ 35% of total bookings. Hotels carry a materially higher net take rate than flights (see Part 2), so the <i>composition</i> of the €150k GMV matters as much as the total — a GMV number driven mostly by flights converts to far less net revenue than one with a healthy hotel mix.</p></div>
@@ -294,18 +307,18 @@ flowchart TB
       <table>
         <thead><tr><th>Month</th><th>Theme</th><th>Key Actions</th><th>Exit Criteria</th></tr></thead>
         <tbody>
-          <tr><td class="row-label">Month 1<br><span style="color:var(--ink-faint);font-weight:400;">Wk 1–4</span></td><td>Target &amp; Landing Page</td><td>Ship <code>jinko.com/mcp</code>. Rank the 5–8 highest-leverage Builder Platform contacts. Send the cold outreach sequence (Asset 1). Get 3+ discovery calls booked.</td><td>Landing page live, 3+ qualified calls booked, 1 platform agrees to a technical trial</td></tr>
-          <tr><td class="row-label">Month 2<br><span style="color:var(--ink-faint);font-weight:400;">Wk 5–8</span></td><td>Hackathon &amp; Bounties</td><td>Co-host a builder hackathon on the platform with the strongest signal. Launch a €500–2,000 developer bounty program. Instrument every integration for GMV and hotel-mix tracking.</td><td>≥5 community-built apps live, ≥1 platform commits to featuring Jinko in official docs/templates</td></tr>
-          <tr><td class="row-label">Month 3<br><span style="color:var(--ink-faint);font-weight:400;">Wk 9–12</span></td><td>Production Deploy</td><td>Convert the strongest platform relationship into a formal "default integration" agreement. Keep the second platform advancing through technical trial. Close the North Star Metric.</td><td>1 platform live in production + 1 in technical beta/trial, &gt;€150k combined GMV (&gt;€10k net revenue), ≥35% hotel mix</td></tr>
+          <tr><td class="row-label">Month 1<br><span style="color:var(--ink-faint);font-weight:400;">Wk 1–4</span></td><td>Activate &amp; Land</td><td>Ship <code>jinko.com/mcp</code>. Kick off Exa's production integration workplan. Re-engage Lovable off the hackathon with a co-marketing + deeper-integration proposal. Launch cold outreach (Asset 1) to 5–8 net-new platforms.</td><td>Landing page live, Exa workplan kicked off, Lovable proposal sent, 3+ cold discovery calls booked</td></tr>
+          <tr><td class="row-label">Month 2<br><span style="color:var(--ink-faint);font-weight:400;">Wk 5–8</span></td><td>Convert &amp; Seed</td><td>Push Exa toward real production traffic. Convert Lovable's proposal into a signed technical trial. Launch a €500–2,000 developer bounty program targeting the cold pipeline's communities.</td><td>Exa processing real production bookings, Lovable in technical trial, ≥5 community-built apps live from the bounty</td></tr>
+          <tr><td class="row-label">Month 3<br><span style="color:var(--ink-faint);font-weight:400;">Wk 9–12</span></td><td>Production Deploy</td><td>Formalize Exa as a default, production, GMV-generating integration. Support Lovable through its technical trial toward production readiness. Keep 2–3 cold prospects advancing toward technical trial for Q2. Close the North Star Metric.</td><td>Exa live in production + Lovable in technical beta/trial, &gt;€150k combined GMV (&gt;€10k net revenue), ≥35% hotel mix</td></tr>
         </tbody>
       </table>
     </div>
 
     <h3>Anti-Goals (What We WILL NOT Do)</h3>
     <ul class="wide">
-      <li><strong>Zero direct Enterprise/Mid-Market RFPs.</strong> Different buyer, different sales cycle (often 9–18 months) — responding to even one RFP this window would eat founder time that belongs in Builder Platform conversations. Any inbound RFP gets a polite decline + "revisit in 2027" note, not a pursuit.</li>
-      <li><strong>No integrations outside the top 5–8 ranked Month-1 targets.</strong> Breadth kills a concentrated GTM motion.</li>
-      <li><strong>No paid acquisition</strong> (ads, sponsorships beyond one hackathon) before Month 2.</li>
+      <li><strong>Zero direct Enterprise/Mid-Market RFPs.</strong> Different buyer, different sales cycle (often 9–18 months) — responding to even one RFP this window would eat founder time that belongs in Builder Platform conversations.</li>
+      <li><strong>No cold-templating Exa or Lovable.</strong> They get direct, relationship-specific outreach from Kevin/the CoS — not the cold sequence built for net-new platforms.</li>
+      <li><strong>No paid acquisition</strong> (ads, sponsorships beyond the bounty program) before Month 2.</li>
       <li><strong>No per-platform API customization.</strong> One SDK, one MCP server.</li>
     </ul>
 
@@ -314,8 +327,8 @@ flowchart TB
       <table>
         <thead><tr><th>Signal (by end of…)</th><th>Trigger</th></tr></thead>
         <tbody>
-          <tr><td class="row-label">Month 1</td><td>Zero discovery calls booked after <strong>25–30 contacts across multiple platforms</strong> → rework the offer/asset, not the target list</td></tr>
-          <tr><td class="row-label">Month 1</td><td>A contact flags "no developer demand for travel" → redirect to a different vertical inside the same platform before abandoning it</td></tr>
+          <tr><td class="row-label">Month 1</td><td>Zero discovery calls booked from the <strong>cold motion</strong> after 25–30 contacts across multiple net-new platforms → rework the offer/asset, not the target list (Exa/Lovable unaffected — different motion entirely)</td></tr>
+          <tr><td class="row-label">Month 2</td><td><strong>Exa's production integration stalls with no clear technical blocker</strong> → escalate to Kevin immediately; a signed partner not converting to GMV is a red flag, not a normal sales-cycle delay</td></tr>
           <tr><td class="row-label">Month 2</td><td>Fewer than 3 community apps shipped → the friction is technical, not incentive-based; pause bounties and fix onboarding first</td></tr>
           <tr><td class="row-label">Month 3</td><td>On track for <strong>&lt;€75k combined GMV</strong> → extend Month 3 by 30 days rather than move goalposts</td></tr>
           <tr><td class="row-label">Any month</td><td>Hotel mix trending &lt;25% with no correction path → escalate to <strong>both Kevin</strong> (agent prompt/UX may steer travelers toward flights over hotels) <strong>and Sébastien</strong> (supply-side inventory/pricing) — a joint product-and-supply problem</td></tr>
@@ -327,7 +340,7 @@ flowchart TB
   <section id="asset1" style="margin-top:56px;">
     <h3 style="margin-top:0;">📧 Embedded Shipped Asset 1 — Cold Outreach Email</h3>
     <div class="asset-meta">
-      <div><b>Target:</b> Head of DevRel / Head of BD at a Builder Platform (e.g., Lovable)</div>
+      <div><b>Target:</b> Head of DevRel / Head of BD at a <b>net-new, cold-tier platform</b> (e.g., Replit, Vercel AI, Bolt.new) — not Lovable (warm, gets a direct proposal) or Exa (already signed)</div>
       <div><b>Channel:</b> Email (LinkedIn as backup, 48h later if no reply)</div>
       <div><b>Goal:</b> Book a 20-minute discovery call to scope a joint MCP integration + developer bounty</div>
       <div><b>Signature note:</b> signed with a GTM-facing title, not "Chief of Staff" — a DevRel counterpart replies to a peer in developer partnerships, not a corporate title.</div>
@@ -493,13 +506,13 @@ flowchart LR
     <div class="part-eyebrow">Summary</div>
     <h2>What This Delivers by Day 90</h2>
     <ol class="summary-list">
-      <li><span class="summary-num">1</span><span><strong>One Builder Platform live in production, one in technical beta/trial</strong> — Jinko as default integration on the first, &gt;€150k combined GMV generating &gt;€10k net Jinko revenue, at ≥35% hotel mix. Proof of willingness to pay, not just willingness to try, with a revenue composition that funds the business, not just the top line.</span></li>
+      <li><span class="summary-num">1</span><span><strong>Exa live in production, Lovable in technical beta/trial</strong> — the signed partnership converted into real, measured GMV, and the warm hackathon relationship converted into a deeper integration. &gt;€150k combined GMV generating &gt;€10k net Jinko revenue, at ≥35% hotel mix, plus a cold pipeline of 5–8 net-new platforms feeding Q2.</span></li>
       <li><span class="summary-num">2</span><span><strong>A support model proven by hand before it's automated</strong> — Phase 0 builds the real playbook on the first 50–100 bookings; Phase 1's hybrid AI + BPO cost converges to under 2.5% of net revenue by Month 12 as deflection ramps with real data, not an assumption made on Day 0.</span></li>
-      <li><span class="summary-num">3</span><span><strong>Founders in their lanes</strong> — Kevin delegates GTM execution and support ops to a CoS who reports directly to him, freeing Product bandwidth; Sébastien gets structured escalation data instead of ad hoc fire drills, and joint ownership (with Kevin) of any signal that traces back to product/UX rather than supply.</span></li>
+      <li><span class="summary-num">3</span><span><strong>Founders in their lanes, by choice not by fix</strong> — Kevin delegates GTM execution and support ops to a direct-report CoS who extends his bandwidth; Sébastien gets structured escalation data instead of ad hoc fire drills, plus joint ownership with Kevin of any signal that traces back to product/UX rather than supply. Nothing here resolves founder friction — there isn't any to resolve.</span></li>
     </ol>
   </section>
 
-  <footer class="doc-foot">Jinko — Chief of Staff 90-Day Plan · v2, revised after founder review · prepared by Nina Tabaka</footer>
+  <footer class="doc-foot">Jinko — Chief of Staff 90-Day Plan · v3, revised after founder review · prepared by Nina Tabaka</footer>
 
 </div>
 </body>
