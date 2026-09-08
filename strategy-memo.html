@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jinko 90-Day Chief of Staff Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F7F5EF;
+    --surface: #FFFFFF;
+    --ink: #1B1813;
+    --ink-soft: #66604F;
+    --ink-faint: #948C76;
+    --accent: #FF6A54;
+    --accent-soft: #FFE7E1;
+    --line: #E4DFCF;
+    --line-strong: #1B1813;
+    --good-ink: #16794A; --good-bg: #E4F5EA;
+    --warn-ink: #A8570E; --warn-bg: #FDEEDA;
+    --bad-ink: #C23A54;  --bad-bg: #FCE6EB;
+    --info-ink: #1D5FD1; --info-bg: #E7F0FE;
+  }
+  * { box-sizing: border-box; }
+  html { text-wrap: balance; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--accent-soft); color: var(--ink); }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+  .page { max-width: 760px; margin: 0 auto; padding: 64px 24px 120px; }
+
+  /* Masthead */
+  .masthead { border-bottom: 2px solid var(--line-strong); padding-bottom: 28px; margin-bottom: 12px; }
+  .kicker {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em;
+    color: var(--accent); text-transform: uppercase; margin-bottom: 18px;
+  }
+  .kicker::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
+  h1.title {
+    font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 40px; line-height: 1.12;
+    margin: 0 0 20px; letter-spacing: -0.01em; text-wrap: balance;
+  }
+  .meta-grid { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; font-size: 13.5px; color: var(--ink-soft); max-width: 480px; }
+  .meta-grid dt { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-faint); padding-top: 2px; }
+  .meta-grid dd { margin: 0; }
+  .rev-badge {
+    display: inline-flex; align-items: center; gap: 6px; margin-top: 16px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; font-weight: 600;
+    background: var(--accent-soft); color: #B8402C; border: 1px solid #F3C4B8;
+    padding: 5px 10px; border-radius: 999px;
+  }
+
+  /* How-to-read */
+  .lede {
+    margin: 32px 0 8px; padding: 20px 22px; background: var(--surface);
+    border: 1px solid var(--line); border-left: 3px solid var(--ink); border-radius: 4px;
+    font-size: 14.5px; color: var(--ink-soft);
+  }
+  .lede b { color: var(--ink); }
+
+  /* TOC */
+  nav.toc {
+    display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 36px 0 0;
+    padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px;
+  }
+  nav.toc a { color: var(--ink-soft); text-decoration: none; }
+  nav.toc a:hover { color: var(--accent); }
+  nav.toc span.n { color: var(--ink-faint); margin-right: 4px; }
+
+  /* Parts */
+  .part { margin-top: 68px; }
+  .part-eyebrow {
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
+    color: var(--ink-faint); text-transform: uppercase; margin-bottom: 10px;
+  }
+  h2 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 700; font-size: 27px; margin: 0 0 26px; text-wrap: balance; }
+  h3 { font-family: 'Source Serif 4', Georgia, serif; font-weight: 600; font-size: 19px; margin: 40px 0 14px; text-wrap: balance; }
+  p { margin: 0 0 16px; max-width: 66ch; }
+  p.wide { max-width: none; }
+  strong { font-weight: 600; color: var(--ink); }
+
+  /* Callouts */
+  .callout {
+    display: flex; gap: 14px; margin: 22px 0; padding: 18px 20px;
+    background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent);
+    border-radius: 4px; font-size: 14.5px;
+  }
+  .callout .icon { font-size: 17px; line-height: 1.5; flex-shrink: 0; }
+  .callout.sebastien { border-left-color: var(--info-ink); }
+  .callout.kevin { border-left-color: var(--good-ink); }
+  .callout.north-star { border-left-color: var(--accent); background: var(--accent-soft); }
+  .callout.warn { border-left-color: var(--warn-ink); }
+  .callout p:last-child { margin-bottom: 0; }
+
+  /* Diagram frame */
+  .diagram {
+    margin: 26px 0; padding: 18px; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 8px; overflow-x: auto;
+  }
+  .diagram-caption { font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; color: var(--ink-faint); margin-top: 10px; text-align: center; }
+
+  /* Tables */
+  .table-wrap { margin: 22px 0; overflow-x: auto; border: 1px solid var(--line-strong); border-radius: 6px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; background: var(--surface); }
+  th, td { text-align: left; padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  thead th {
+    font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; letter-spacing: 0.05em; text-transform: uppercase;
+    color: var(--ink-faint); background: #FBFAF6; border-bottom: 1.5px solid var(--line-strong);
+    white-space: nowrap;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  td.num, th.num { font-family: 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  tr.total td { font-weight: 600; background: #FBFAF6; }
+  tr.pct td { font-weight: 700; background: var(--accent-soft); color: #A03D28; }
+  .row-label { font-weight: 500; white-space: nowrap; }
+
+  .pill { display: inline-flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+  .pill.low { background: var(--good-bg); color: var(--good-ink); }
+  .pill.med { background: var(--warn-bg); color: var(--warn-ink); }
+  .pill.high { background: var(--bad-bg); color: var(--bad-ink); }
+  .pill.info { background: var(--info-bg); color: var(--info-ink); }
+
+  /* Lists */
+  ul, ol { padding-left: 22px; margin: 0 0 16px; max-width: 66ch; }
+  li { margin-bottom: 10px; }
+  li:last-child { margin-bottom: 0; }
+
+  /* Code / email asset */
+  .asset-meta { font-size: 13px; color: var(--ink-soft); margin-bottom: 16px; }
+  .asset-meta div { margin-bottom: 4px; }
+  .asset-meta b { color: var(--ink); font-weight: 600; }
+  pre.code {
+    background: #1B1813; color: #EDE9DD; border-radius: 8px; padding: 22px 24px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; line-height: 1.75;
+    overflow-x: auto; margin: 0 0 22px; white-space: pre;
+  }
+
+  /* Phase blocks */
+  .phase { display: flex; gap: 16px; margin: 22px 0; }
+  .phase-num {
+    flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--ink); color: var(--bg);
+    display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 13px;
+  }
+
+  hr { border: none; border-top: 1px solid var(--line); margin: 56px 0; }
+
+  /* Summary */
+  .summary-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 18px; }
+  .summary-list li { display: flex; gap: 16px; margin: 0; padding: 18px 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
+  .summary-num { font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 20px; color: var(--accent); flex-shrink: 0; }
+
+  footer.doc-foot { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 12px; color: var(--ink-faint); font-family: 'IBM Plex Mono', monospace; }
+
+  @media (max-width: 600px) {
+    h1.title { font-size: 30px; }
+    .page { padding: 40px 18px 90px; }
+    .meta-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="masthead">
+    <div class="kicker">Chief of Staff — Candidate Submission</div>
+    <h1 class="title">90-Day Plan &amp; Support Model for Jinko</h1>
+    <dl class="meta-grid">
+      <dt>Prepared for</dt><dd>Sébastien &amp; Kevin, Co-Founders, Jinko (YC W26)</dd>
+      <dt>Prepared by</dt><dd>Nina Tabaka, Candidate — Chief of Staff</dd>
+      <dt>Date</dt><dd>September 8, 2026</dd>
+    </dl>
+    <span class="rev-badge">↻ v2 — revised after founder review</span>
+  </header>
+
+  <div class="lede">
+    <b>How to read this document:</b> Part 0 is the operating model — how the Chief of Staff role converts founder alignment into execution capacity. Part 1 is the 90-day GTM plan I'd run starting Day 1. Part 2 is the support model that scales <i>alongside</i> Part 1: hands-on and manual for the first 50–100 bookings while I build the real playbook, then handed to a hybrid AI + BPO system once the actual failure modes are understood — not a BPO stack built in advance on guesses.
+  </div>
+
+  <nav class="toc">
+    <a href="#part0"><span class="n">0</span>Founder Alignment</a>
+    <a href="#part1"><span class="n">1</span>90-Day GTM</a>
+    <a href="#asset1"><span class="n">↳</span>Cold Outreach Asset</a>
+    <a href="#part2"><span class="n">2</span>Support Model</a>
+    <a href="#summary"><span class="n">→</span>Summary</a>
+  </nav>
+
+  <section class="part" id="part0">
+    <div class="part-eyebrow">Part 0</div>
+    <h2>Executive Summary &amp; Founder Alignment</h2>
+
+    <p class="wide"><strong>The Chief of Staff role exists to convert founder alignment into execution capacity.</strong> Sébastien and Kevin's shared history gives Jinko a strong, aligned sense of where the business needs to go. As Jinko scales, the CoS role converts high-level founder synergy into distinct operational swimlanes, preventing context-switching — GTM execution and support ops become one dedicated swimlane, run day-to-day by the CoS, so both founders stay focused on what only they can do.</p>
+
+    <h3>Founder Focus vs. CoS Operational Leverage</h3>
+    <p class="wide">The CoS is not a layer above the founders — it's a lateral execution engine reporting directly to Kevin, taking GTM execution and Support Ops off his plate so he can stay focused on Product. Sébastien remains a peer swimlane; the CoS exchanges supply data and escalations with him directly, without needing Kevin in the loop for every handoff.</p>
+
+    <div class="diagram">
+      <pre class="mermaid">
+flowchart TB
+    subgraph KEV["📈 KEVIN — Product &amp; GTM Vision"]
+        direction TB
+        K1["Product roadmap &amp; API design"]
+        K2["Pricing &amp; commercial deals"]
+        K3["Investor &amp; board narrative"]
+    end
+
+    subgraph COS["⚙️ CHIEF OF STAFF — Nina (reports to Kevin)"]
+        direction TB
+        C1["Executes 90-day Builder Platform GTM"]
+        C2["Owns support ops &amp; unit economics"]
+        C3["Kills redundant solution design across swimlanes"]
+    end
+
+    subgraph SEB["🔧 SÉBASTIEN — Supply &amp; Tech"]
+        direction TB
+        S1["GDS / NDC &amp; airline contracts"]
+        S2["Supplier reliability &amp; SLAs"]
+        S3["IATA accreditation, MoR compliance"]
+    end
+
+    KEV -- "delegates GTM execution + Support Ops" --> COS
+    COS -- "weekly GTM signal — frees Kevin for Product" --> KEV
+    S2 -. "reliability data &amp; SLAs" .-> COS
+    COS -. "escalations &amp; failure patterns" .-> SEB
+      </pre>
+    </div>
+
+    <h3>Strategic Alignment</h3>
+    <div class="callout sebastien">
+      <span class="icon">🛡️</span>
+      <div>
+        <p><strong>For Sébastien — supplier reliability is the product, not a side concern.</strong> Every claim we make to Builder Platforms ("deterministic, 500ms, no captchas") is only true if supply holds. The support model in Part 2 protects this directly: escalations route supplier-caused failures (cancellations, hotel no-shows) back to you as structured data instead of anecdotes, and the sensitivity audit treats hotel margin as the single highest-impact variable in the whole model — because that's exactly where supply quality and mix show up in the P&amp;L. You get signal, not tickets.</p>
+      </div>
+    </div>
+    <div class="callout kevin">
+      <span class="icon">🚀</span>
+      <div>
+        <p><strong>Aligning with Kevin's commercial vision — executing a sharp, concentrated bet on Builder Platforms via MCP.</strong> The GTM plan spends 80% of energy on one segment and explicitly excludes Enterprise/Mid-Market RFPs, which are too slow and too founder-time-intensive for this window. The North Star Metric is a production commitment, not a vanity metric like signups or stars — it's the number that proves willingness to pay, not willingness to try.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="part" id="part1">
+    <div class="part-eyebrow">Part 1</div>
+    <h2>90-Day Go-To-Market Strategy</h2>
+
+    <h3>Focus: Builder Platforms via MCP (80% of energy allocation)</h3>
+    <p class="wide">We are not selling to individual developers. We are selling to the <strong>platforms developers already build on</strong> — Lovable, Replit, Vercel AI, Exa.ai (and their MCP/tool ecosystems) — so that every app built on top of them inherits Jinko as the default travel primitive. One integration, thousands of downstream apps. <strong>Expected sales cycle: 2–4 months</strong> per platform, from first contact to production default-integration status. The remaining 20% of energy goes to opportunistic inbound and existing pipeline maintenance — not to a second GTM motion.</p>
+
+    <h3>Strategic Moat: Native API vs. "Browser-Use" Failure Modes</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Failure Mode</th><th>Browser-Use Scrapers</th><th>Jinko Native API</th></tr></thead>
+        <tbody>
+          <tr><td class="row-label">CAPTCHAs / bot walls</td><td>Breaks the agent mid-task, unrecoverable without human intervention</td><td>Never encountered — direct API, no browser</td></tr>
+          <tr><td class="row-label">Token overhead</td><td>15,000–50,000+ tokens per booking flow</td><td>~500 tokens per call — structured JSON in/out</td></tr>
+          <tr><td class="row-label">Latency</td><td>30–90+ seconds per flow, highly variable</td><td>&lt;450ms, deterministic</td></tr>
+          <tr><td class="row-label">PNR / ticketing</td><td><strong>None.</strong> Cannot issue a real, GDS-backed PNR</td><td>Native IATA ticketing, direct GDS connections, real PNR generation</td></tr>
+          <tr><td class="row-label">Payment &amp; liability</td><td>No Merchant of Record — builder inherits chargeback/compliance risk</td><td>Jinko is MoR — liability sits with us</td></tr>
+          <tr><td class="row-label">Reliability</td><td>Breaks silently whenever the target site redesigns</td><td>Versioned API contract — breaking changes are opt-in</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="wide">This table <i>is</i> the pitch to a Builder Platform's DevRel/BD lead: they are currently shipping demos that cannot actually book anything real. We let them ship a feature that works.</p>
+
+    <h3>North Star &amp; Secondary Metrics</h3>
+    <div class="callout north-star">
+      <span class="icon">🎯</span>
+      <div>
+        <p><strong>North Star (Day 90):</strong> 1 Builder Platform live in production running Jinko as its DEFAULT travel integration, plus 1 additional platform in technical beta/trial — collectively driving <strong>&gt;€150,000 in GMV</strong> (generating <strong>&gt;€10,000 in net Jinko revenue</strong>).</p>
+      </div>
+    </div>
+    <p class="wide">Two platforms fully in production by Day 90 doesn't square with a 2–4 month sales cycle that starts at Day 1 — one live, one in trial is the honest version of the same ambition. GMV and net revenue are reported separately on purpose: GMV (traveler-facing transaction value) proves real usage; net revenue (Jinko's take) is what actually funds the business — conflating the two overstates what's in the bank.</p>
+    <div class="callout">
+      <span class="icon">📊</span>
+      <div><p><strong>Secondary Metric:</strong> Hotel booking mix ≥ 35% of total bookings. Hotels carry a materially higher net take rate than flights (see Part 2), so the <i>composition</i> of the €150k GMV matters as much as the total — a GMV number driven mostly by flights converts to far less net revenue than one with a healthy hotel mix.</p></div>
+    </div>
+
+    <h3>90-Day Execution Timeline</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Month</th><th>Theme</th><th>Key Actions</th><th>Exit Criteria</th></tr></thead>
+        <tbody>
+          <tr><td class="row-label">Month 1<br><span style="color:var(--ink-faint);font-weight:400;">Wk 1–4</span></td><td>Target &amp; Landing Page</td><td>Ship <code>jinko.com/mcp</code>. Rank the 5–8 highest-leverage Builder Platform contacts. Send the cold outreach sequence (Asset 1). Get 3+ discovery calls booked.</td><td>Landing page live, 3+ qualified calls booked, 1 platform agrees to a technical trial</td></tr>
+          <tr><td class="row-label">Month 2<br><span style="color:var(--ink-faint);font-weight:400;">Wk 5–8</span></td><td>Hackathon &amp; Bounties</td><td>Co-host a builder hackathon on the platform with the strongest signal. Launch a €500–2,000 developer bounty program. Instrument every integration for GMV and hotel-mix tracking.</td><td>≥5 community-built apps live, ≥1 platform commits to featuring Jinko in official docs/templates</td></tr>
+          <tr><td class="row-label">Month 3<br><span style="color:var(--ink-faint);font-weight:400;">Wk 9–12</span></td><td>Production Deploy</td><td>Convert the strongest platform relationship into a formal "default integration" agreement. Keep the second platform advancing through technical trial. Close the North Star Metric.</td><td>1 platform live in production + 1 in technical beta/trial, &gt;€150k combined GMV (&gt;€10k net revenue), ≥35% hotel mix</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Anti-Goals (What We WILL NOT Do)</h3>
+    <ul class="wide">
+      <li><strong>Zero direct Enterprise/Mid-Market RFPs.</strong> Different buyer, different sales cycle (often 9–18 months) — responding to even one RFP this window would eat founder time that belongs in Builder Platform conversations. Any inbound RFP gets a polite decline + "revisit in 2027" note, not a pursuit.</li>
+      <li><strong>No integrations outside the top 5–8 ranked Month-1 targets.</strong> Breadth kills a concentrated GTM motion.</li>
+      <li><strong>No paid acquisition</strong> (ads, sponsorships beyond one hackathon) before Month 2.</li>
+      <li><strong>No per-platform API customization.</strong> One SDK, one MCP server.</li>
+    </ul>
+
+    <h3>Pivot Triggers</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Signal (by end of…)</th><th>Trigger</th></tr></thead>
+        <tbody>
+          <tr><td class="row-label">Month 1</td><td>Zero discovery calls booked after <strong>25–30 contacts across multiple platforms</strong> → rework the offer/asset, not the target list</td></tr>
+          <tr><td class="row-label">Month 1</td><td>A contact flags "no developer demand for travel" → redirect to a different vertical inside the same platform before abandoning it</td></tr>
+          <tr><td class="row-label">Month 2</td><td>Fewer than 3 community apps shipped → the friction is technical, not incentive-based; pause bounties and fix onboarding first</td></tr>
+          <tr><td class="row-label">Month 3</td><td>On track for <strong>&lt;€75k combined GMV</strong> → extend Month 3 by 30 days rather than move goalposts</td></tr>
+          <tr><td class="row-label">Any month</td><td>Hotel mix trending &lt;25% with no correction path → escalate to <strong>both Kevin</strong> (agent prompt/UX may steer travelers toward flights over hotels) <strong>and Sébastien</strong> (supply-side inventory/pricing) — a joint product-and-supply problem</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="asset1" style="margin-top:56px;">
+    <h3 style="margin-top:0;">📧 Embedded Shipped Asset 1 — Cold Outreach Email</h3>
+    <div class="asset-meta">
+      <div><b>Target:</b> Head of DevRel / Head of BD at a Builder Platform (e.g., Lovable)</div>
+      <div><b>Channel:</b> Email (LinkedIn as backup, 48h later if no reply)</div>
+      <div><b>Goal:</b> Book a 20-minute discovery call to scope a joint MCP integration + developer bounty</div>
+      <div><b>Signature note:</b> signed with a GTM-facing title, not "Chief of Staff" — a DevRel counterpart replies to a peer in developer partnerships, not a corporate title.</div>
+    </div>
+    <pre class="code">Subject: Your users' AI agents can't actually book a flight — we fixed that
+
+Hi {{First Name}},
+
+Quick one — I've been building demos on {{Platform}} and noticed something:
+every "AI travel agent" template I've seen (yours included) either fakes the
+booking step or hands off to a browser-automation scraper that breaks on
+captchas and can't issue a real ticket.
+
+We built Jinko to fix exactly that gap. It's a native travel API + MCP
+server that gives any AI agent real execution — deterministic search,
+booking, and payment, with actual IATA ticketing, direct GDS connections,
+and real PNR generation. No browser, no captchas, no token bloat:
+
+  - &lt;450ms response time (vs. 30-90s for browser-use scrapers)
+  - ~500 tokens per call (vs. 15-50k for DOM-based automation)
+  - We're the Merchant of Record — your users' agents can transact without
+    you inheriting payment/compliance liability
+
+Two-line setup with the Vercel AI SDK / Claude Desktop / any MCP client:
+
+  npx @jinko/mcp-server
+
+I'd like to propose two things for {{Platform}}:
+  1. A joint MCP integration — Jinko wired in as the default travel tool
+     in your relevant templates, with $500 in free sandbox credit for
+     your team to build and test against.
+  2. A co-branded developer bounty (€500-2,000 per shipped integration)
+     to seed real, working travel apps in your community.
+
+Worth 20 minutes this week or next to scope it out?
+
+Best,
+Nina Tabaka
+GTM &amp; Developer Partnerships, Jinko
+{{calendar link}}</pre>
+  </section>
+
+  <hr>
+
+  <section class="part" id="part2">
+    <div class="part-eyebrow">Part 2</div>
+    <h2>Traveler Support Model</h2>
+    <p class="wide"><strong>The constraint:</strong> in-house, always-on European travel support is not viable on €10–15 flight commissions alone at scale — but scale isn't the Day 1 problem. The sequencing below is the actual plan: prove the failure modes by hand first, then build the system that handles them at volume.</p>
+
+    <h3>Phase 0 — Manual Support (Bookings 1–100)</h3>
+    <div class="phase">
+      <div class="phase-num">0</div>
+      <p class="wide" style="margin:0;">For the first 50–100 bookings, I handle support personally — every contact, every edge case, logged by hand. This isn't a stopgap; it's how the Protocol Matrix and the deflection/BPO assumptions below get validated instead of guessed. Real traveler contacts at this stage tell us which of the 4 emergency cases actually happen, how often, and what a real resolution looks like — data no vendor RFP or industry benchmark can give us before we've booked a single trip. The hybrid model in Phase 1 launches once this data exists, not before.</p>
+    </div>
+
+    <h3>Phase 1 — Hybrid AI + BPO (Bookings 100+)</h3>
+    <div class="diagram">
+      <pre class="mermaid">
+flowchart LR
+    A["Traveler contact&lt;br&gt;(chat / email / webhook)"] --> B{"Tier 1: AI Agent&lt;br&gt;(LLM tool-calling)"}
+    B -- "deflected (ramping — see table)" --> C["Resolved — no human touch&lt;br&gt;€0.50/contact"]
+    B -- "escalated" --> D["Tier 2: Specialized Offshore&lt;br&gt;Travel BPO"]
+    D --> E["GDS-certified agent&lt;br&gt;(Amadeus/Sabre)&lt;br&gt;€8.00/ticket, blended"]
+    E --> F["Resolved + logged back&lt;br&gt;to supplier reliability data"]
+      </pre>
+    </div>
+    <ul class="wide">
+      <li><strong>Tier 1 — AI Deflection:</strong> Every inbound contact hits an LLM agent first, with direct tool-calling access to booking status, PNR lookup, and rebooking APIs. Deflection is <strong>not</strong> assumed flat from Day 0 — it ramps as the model sees more real ticket volume from Phase 0 onward: <strong>35–40% at launch → 50% by Month 6 → 60% by Month 12.</strong></li>
+      <li><strong>Tier 2 — Specialized Offshore Travel BPO:</strong> Escalations route to a GDS-certified BPO, priced <strong>per resolved ticket, not per hour.</strong> €8.00/ticket is the blended rate for standard escalations; critical incidents carry a separate reserve (see Protocol Matrix, Scenario 2).</li>
+    </ul>
+
+    <h3>Financial Capacity Table</h3>
+    <div class="callout warn">
+      <span class="icon">⚠️</span>
+      <div><p>All figures below are illustrative, invented planning variables — see the Sensitivity Audit for what's assumed vs. tested. "Net revenue" here is Jinko's own blended take per booking (flight fee + hotel margin, at ≥35% hotel mix), assumed at <strong>€25</strong> — deliberately <i>not</i> the traveler-facing GMV used as the Part 1 North Star; the two are kept separate for the same reason the North Star Metric now reports GMV and net revenue separately.</p></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th></th><th class="num">Month 0</th><th class="num">Month 6</th><th class="num">Month 12</th></tr></thead>
+        <tbody>
+          <tr><td class="row-label">Monthly bookings</td><td class="num">400</td><td class="num">2,000</td><td class="num">4,000</td></tr>
+          <tr><td class="row-label">Jinko net revenue (× €25)</td><td class="num">€10,000</td><td class="num">€50,000</td><td class="num">€100,000</td></tr>
+          <tr><td class="row-label">Contact rate (assumed)</td><td class="num">15%</td><td class="num">15%</td><td class="num">15%</td></tr>
+          <tr><td class="row-label">Total contacts</td><td class="num">60</td><td class="num">300</td><td class="num">600</td></tr>
+          <tr><td class="row-label">AI deflection rate (ramping)</td><td class="num">35%</td><td class="num">50%</td><td class="num">60%</td></tr>
+          <tr><td class="row-label">Tier 1 (AI) cost @ €0.50</td><td class="num">€30</td><td class="num">€150</td><td class="num">€300</td></tr>
+          <tr><td class="row-label">Escalated to Tier 2 BPO</td><td class="num">39</td><td class="num">150</td><td class="num">240</td></tr>
+          <tr><td class="row-label">Tier 2 (BPO) cost @ €8.00</td><td class="num">€312</td><td class="num">€1,200</td><td class="num">€1,920</td></tr>
+          <tr class="total"><td class="row-label">Total support cost</td><td class="num">€342</td><td class="num">€1,350</td><td class="num">€2,220</td></tr>
+          <tr class="pct"><td class="row-label">% of net revenue</td><td class="num">3.4%</td><td class="num">2.7%</td><td class="num">2.2%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="wide">This is the honest version of the model: support cost starts <strong>above</strong> the 2.5% long-run target while the AI is still learning (Month 0, subsidized in practice by Phase 0's manual groundwork) and <strong>converges below it by Month 12</strong> as deflection improves with real volume — not a flat ratio assumed from day one. Critical-incident costs (Protocol Matrix Scenario 2) are budgeted separately via a monthly emergency reserve and are not included in the €8.00 blended BPO rate above.</p>
+
+    <h3>Explicit Invented Variables &amp; Sensitivity Audit</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Variable</th><th>Assumed</th><th>Stress Test</th><th>Impact</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="row-label">Contact rate</td><td class="num">15%</td><td>30%</td>
+            <td><span class="pill low">Low</span></td>
+            <td>Doubling to 30% doubles support cost — at Month 12, ratio moves 2.2% → 4.4% of net revenue. Still well below the booking margin it protects.</td>
+          </tr>
+          <tr>
+            <td class="row-label">Hotel net margin</td><td class="num">€35.00</td><td>20–35% mix</td>
+            <td><span class="pill high">High</span></td>
+            <td>Single biggest driver of the support-cost ratio. Below ~30% hotel mix, the ratio crosses 2.5% even at Month 12 deflection — why the secondary metric targets ≥35%, a buffer above the danger floor.</td>
+          </tr>
+          <tr>
+            <td class="row-label">BPO ticket cost</td><td class="num">€8.00</td><td>€15.00</td>
+            <td><span class="pill med">Medium</span></td>
+            <td>At Month 12 volume, €15/ticket raises total to €3,900 (~3.9% of net revenue). Mitigation: multi-year BPO contract with volume-based step-downs before Month 6.</td>
+          </tr>
+          <tr>
+            <td class="row-label">AI deflection cost</td><td class="num">€0.50</td><td>€5.00 (10x)</td>
+            <td><span class="pill low">Low</span></td>
+            <td>Even at 10x, Tier 1 spend at Month 12 is only €3,000 — structurally small vs. Tier 2 BPO cost.</td>
+          </tr>
+          <tr>
+            <td class="row-label">Look-to-book limit</td><td class="num">150:1</td><td>—</td>
+            <td><span class="pill info">Infra</span></td>
+            <td>Bounds Jinko's GDS/search cost exposure. Instead of rate-limiting agents (hurts DX), the mitigation is a <strong>caching layer</strong> on high-frequency search patterns.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Protocol Matrix — 4 Emergency Cases</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Scenario</th><th>Response Protocol</th><th>Tier</th><th>SLA</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="row-label">1</td><td><i>"Never got my booking reference"</i></td>
+            <td>100% automated — Tier 1 AI webhook fetches the PNR via email lookup and resends the confirmation instantly. No human touch.</td>
+            <td>Tier 1 (AI)</td><td class="num">&lt; 2 min</td>
+          </tr>
+          <tr>
+            <td class="row-label">2</td><td><i>"11pm, hotel says they have no booking"</i></td>
+            <td>Priority routing bypasses AI triage — Tier 2 BPO calls the hotel desk directly; pushes a secondary payment or rehouses the guest via a pre-authorized emergency budget. Budgeted at <strong>€20–€25/critical incident</strong>, separate from the blended €8.00 rate.</td>
+            <td>Tier 2, priority</td><td class="num">&lt; 3 min ack<br>&lt; 45 min resolution</td>
+          </tr>
+          <tr>
+            <td class="row-label">3</td><td><i>"Name typo, 18 hours to flight"</i></td>
+            <td>Routed to a GDS-certified BPO agent who <strong>processes the correction according to the specific airline's waiver policy</strong> — eligibility and fees vary by carrier and fare class.</td>
+            <td>Tier 2, GDS-certified</td><td class="num">&lt; 4 hours</td>
+          </tr>
+          <tr>
+            <td class="row-label">4</td><td><i>"Flight cancelled by the airline"</i></td>
+            <td>Tier 2 BPO executes automated rebooking under the airline's waiver policy, falling back to manual GDS intervention only when the waiver is ambiguous.</td>
+            <td>Tier 2, automated-first</td><td class="num">&lt; 3 min ack<br>&lt; 45 min resolution</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="summary">
+    <div class="part-eyebrow">Summary</div>
+    <h2>What This Delivers by Day 90</h2>
+    <ol class="summary-list">
+      <li><span class="summary-num">1</span><span><strong>One Builder Platform live in production, one in technical beta/trial</strong> — Jinko as default integration on the first, &gt;€150k combined GMV generating &gt;€10k net Jinko revenue, at ≥35% hotel mix. Proof of willingness to pay, not just willingness to try, with a revenue composition that funds the business, not just the top line.</span></li>
+      <li><span class="summary-num">2</span><span><strong>A support model proven by hand before it's automated</strong> — Phase 0 builds the real playbook on the first 50–100 bookings; Phase 1's hybrid AI + BPO cost converges to under 2.5% of net revenue by Month 12 as deflection ramps with real data, not an assumption made on Day 0.</span></li>
+      <li><span class="summary-num">3</span><span><strong>Founders in their lanes</strong> — Kevin delegates GTM execution and support ops to a CoS who reports directly to him, freeing Product bandwidth; Sébastien gets structured escalation data instead of ad hoc fire drills, and joint ownership (with Kevin) of any signal that traces back to product/UX rather than supply.</span></li>
+    </ol>
+  </section>
+
+  <footer class="doc-foot">Jinko — Chief of Staff 90-Day Plan · v2, revised after founder review · prepared by Nina Tabaka</footer>
+
+</div>
+</body>
+</html>
