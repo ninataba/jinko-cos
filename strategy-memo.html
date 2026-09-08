@@ -181,11 +181,24 @@
       <dt>Prepared by</dt><dd>Nina Tabaka, Candidate — Chief of Staff</dd>
       <dt>Date</dt><dd>September 8, 2026</dd>
     </dl>
-    <span class="rev-badge">↻ v3 — revised after founder review</span>
+    <span class="rev-badge">↻ v4 — stress-tested against 4 operational edge cases</span>
   </header>
 
   <div class="lede">
-    <b>How to read this document:</b> Part 0 is the operating model — how the Chief of Staff role extends founder bandwidth. Part 1 is the 90-day GTM plan I'd run starting Day 1, built on where Jinko's Builder Platform relationships actually stand today — signed, warm, and cold. Part 2 is the support model that scales <i>alongside</i> Part 1: hands-on and manual for the first 50–100 bookings while the team builds the real playbook, then handed to a hybrid AI + BPO system once the actual failure modes are understood.
+    <b>How to read this document:</b> Part 0 is the operating model — how the Chief of Staff role extends founder bandwidth, inside an explicit, bounded time budget. Part 1 is the 90-day GTM plan, built on where Jinko's Builder Platform relationships actually stand today — signed, warm, and cold. Part 2 is the support model that scales <i>alongside</i> Part 1, with a hard cap on manual hours so it never crowds out GTM execution.
+  </div>
+
+  <h3 style="margin-top:32px;">Stress-Test Log (v3 → v4)</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th class="num">#</th><th>Edge Case Challenged</th><th>Fix Applied</th></tr></thead>
+      <tbody>
+        <tr><td class="num row-label">1</td><td>Phase 0 manual support (60 tickets/mo) collides with running cold outreach + Exa + Lovable simultaneously</td><td>Explicit <strong>10 hrs/week CoS bandwidth cap</strong> on support ops; Tier 1 AI triage live from Day 1 so manual time goes only to qualitative review of escalations, not raw volume</td></tr>
+        <tr><td class="num row-label">2</td><td>"Multi-year BPO contract" mitigation contradicts staying lean at Seed</td><td>Replaced with <strong>volume-tiered agreements + 30-day exit clauses + dynamic staffing scaling</strong></td></tr>
+        <tr><td class="num row-label">3</td><td>"Default integration" ask of Lovable in 90 days has no stated value exchange</td><td>Added explicit <strong>Lovable value proposition</strong>: MoR offload + eliminates broken scraping flows + risk-free template monetization</td></tr>
+        <tr><td class="num row-label">4</td><td>€20–25 critical-incident budget doesn't cover a real room-rate delta (e.g., a $200 gap)</td><td>Split into <strong>BPO priority-handling fee (€20–25)</strong> vs. a separate <strong>Emergency Rehousing Loss Reserve</strong>, funded from hotel-mix margin, covering the rate delta itself</td></tr>
+      </tbody>
+    </table>
   </div>
 
   <nav class="toc">
@@ -200,7 +213,7 @@
     <div class="part-eyebrow">Part 0</div>
     <h2>Executive Summary &amp; Founder Alignment</h2>
 
-    <p class="wide"><strong>The Chief of Staff role exists to extend founder bandwidth, not resolve founder friction.</strong> Sébastien has confirmed that founder decision-making at Jinko is already collegial and the Supply/Product swimlanes are well-coordinated — this plan isn't fixing a coordination problem that doesn't exist. As Jinko scales, the CoS role extends founder bandwidth, institutionalizing operational execution across GTM and Support Ops so Kevin remains focused on core Product strategy. The CoS takes full day-to-day ownership of GTM execution and support ops as a dedicated operating swimlane — an operational force multiplier, freeing founder time for what only founders can do.</p>
+    <p class="wide"><strong>The Chief of Staff role exists to extend founder bandwidth, not resolve founder friction.</strong> Sébastien has confirmed that founder decision-making at Jinko is already collegial and the Supply/Product swimlanes are well-coordinated — this plan isn't fixing a coordination problem that doesn't exist. As Jinko scales, the CoS role extends founder bandwidth, institutionalizing operational execution across GTM and Support Ops so Kevin remains focused on core Product strategy. The CoS takes full day-to-day ownership of GTM execution and support ops as a dedicated operating swimlane — an operational force multiplier, freeing founder time for what only founders can do. That ownership is deliberately <strong>bounded</strong>, not open-ended: support ops carries an explicit weekly hour cap (Part 2, Phase 0) specifically so it can never silently crowd out the GTM motion this plan is built on.</p>
 
     <h3>Reporting Line &amp; Org Positioning</h3>
     <p class="wide">The CoS is a <strong>direct report to Kevin</strong> and a lateral execution engine for his GTM vision — not a layer above either founder, and not a mechanism for adjudicating between them. Kevin delegates GTM execution and Support Ops so he can stay focused on Product; Sébastien remains a peer swimlane, exchanging supply data and escalations directly with the CoS without needing Kevin in the loop for every handoff.</p>
@@ -218,7 +231,7 @@ flowchart TB
     subgraph COS["⚙️ CHIEF OF STAFF — Nina (direct report to Kevin)"]
         direction TB
         C1["Executes 90-day Builder Platform GTM"]
-        C2["Owns support ops &amp; unit economics"]
+        C2["Owns support ops &amp; unit economics (capped 10h/wk)"]
         C3["Extends founder bandwidth on execution"]
     end
 
@@ -264,11 +277,14 @@ flowchart TB
         <thead><tr><th>Tier</th><th>Platform</th><th>Status</th><th>90-Day Job</th></tr></thead>
         <tbody>
           <tr><td class="row-label"><span class="pill low">Signed</span></td><td>Exa</td><td>Already a signed partner</td><td>Operationalize into production — convert the signature into real, measured GMV</td></tr>
-          <tr><td class="row-label"><span class="pill med">Warm</span></td><td>Lovable</td><td>Active — Jinko already co-hosted a hackathon with them</td><td>Convert warmth into a deeper technical integration + joint co-marketing, not cold outreach</td></tr>
+          <tr><td class="row-label"><span class="pill med">Warm</span></td><td>Lovable</td><td>Active — Jinko already co-hosted a hackathon with them</td><td>Convert warmth into a deeper technical integration, backed by an explicit value case (below) — not cold outreach</td></tr>
           <tr><td class="row-label"><span class="pill info">Cold</span></td><td>Replit, Vercel AI, Bolt.new + 2–3 second-tier</td><td>Net-new, no prior contact</td><td>Cold outreach motion (Asset 1) — builds the pipeline behind Exa and Lovable</td></tr>
         </tbody>
       </table>
     </div>
+
+    <h3>Why Lovable Adopts Jinko: The Explicit Value Case</h3>
+    <p class="wide">Asking Lovable to make Jinko their default travel integration in 90 days is only credible with a stated reason to say yes. The pitch is concrete, not aspirational: <strong>by adopting Jinko, Lovable offloads payment compliance (Merchant of Record) and eliminates broken agent flows from web scraping — letting them monetize travel-agent templates risk-free</strong>, instead of shipping demos that fake the booking step or inherit chargeback liability the moment a user transacts for real. That's the specific leverage behind the Month 1–2 proposal, not a generic "let's go deeper" ask.</p>
 
     <h3>Focus: Builder Platforms via MCP (80% of energy allocation)</h3>
     <p class="wide">We are not selling to individual developers. We are selling to the <strong>platforms developers already build on</strong> — and the 90-day job is different for each tier above. <strong>Expected sales cycle: 2–4 months</strong> per platform, first contact to production — which is exactly why Exa and Lovable, both already ahead of that clock, anchor the Day-90 North Star, while the cold motion targets Month 4+ conversions. The remaining 20% of energy goes to opportunistic inbound and existing pipeline maintenance.</p>
@@ -299,7 +315,7 @@ flowchart TB
     <p class="wide">Exa and Lovable anchor the North Star because they're already ahead of a fresh 2–4 month sales cycle — a cold-started relationship realistically can't clear "production" by Day 90, so the honest target leans on the relationships that already exist. GMV and net revenue are reported separately on purpose: GMV (traveler-facing transaction value) proves real usage; net revenue (Jinko's take) is what actually funds the business.</p>
     <div class="callout">
       <span class="icon">📊</span>
-      <div><p><strong>Secondary Metric:</strong> Hotel booking mix ≥ 35% of total bookings. Hotels carry a materially higher net take rate than flights (see Part 2), so the <i>composition</i> of the €150k GMV matters as much as the total — a GMV number driven mostly by flights converts to far less net revenue than one with a healthy hotel mix.</p></div>
+      <div><p><strong>Secondary Metric:</strong> Hotel booking mix ≥ 35% of total bookings. Hotels carry a materially higher net take rate than flights (see Part 2), so the <i>composition</i> of the €150k GMV matters as much as the total — a GMV number driven mostly by flights converts to far less net revenue than one with a healthy hotel mix. This mix also directly funds the Emergency Rehousing Loss Reserve described in Part 2 — another reason it's tracked as a first-class metric, not a nice-to-have.</p></div>
     </div>
 
     <h3>90-Day Execution Timeline</h3>
@@ -307,7 +323,7 @@ flowchart TB
       <table>
         <thead><tr><th>Month</th><th>Theme</th><th>Key Actions</th><th>Exit Criteria</th></tr></thead>
         <tbody>
-          <tr><td class="row-label">Month 1<br><span style="color:var(--ink-faint);font-weight:400;">Wk 1–4</span></td><td>Activate &amp; Land</td><td>Ship <code>jinko.com/mcp</code> — live preview: <a href="https://claude.ai/code/artifact/ba5106b7-4d5d-4ab8-81ed-fd2473fc76d3" target="_blank" rel="noopener">Jinko MCP landing page ↗</a>. Kick off Exa's production integration workplan. Re-engage Lovable off the hackathon with a co-marketing + deeper-integration proposal. Launch cold outreach (Asset 1) to 5–8 net-new platforms.</td><td>Landing page live, Exa workplan kicked off, Lovable proposal sent, 3+ cold discovery calls booked</td></tr>
+          <tr><td class="row-label">Month 1<br><span style="color:var(--ink-faint);font-weight:400;">Wk 1–4</span></td><td>Activate &amp; Land</td><td>Ship <code>jinko.com/mcp</code> — live preview: <a href="https://claude.ai/code/artifact/ba5106b7-4d5d-4ab8-81ed-fd2473fc76d3" target="_blank" rel="noopener">Jinko MCP landing page ↗</a>. Kick off Exa's production integration workplan. Re-engage Lovable off the hackathon with the MoR/risk-free-monetization proposal above. Launch cold outreach (Asset 1) to 5–8 net-new platforms.</td><td>Landing page live, Exa workplan kicked off, Lovable proposal sent, 3+ cold discovery calls booked</td></tr>
           <tr><td class="row-label">Month 2<br><span style="color:var(--ink-faint);font-weight:400;">Wk 5–8</span></td><td>Convert &amp; Seed</td><td>Push Exa toward real production traffic. Convert Lovable's proposal into a signed technical trial. Launch a €500–2,000 developer bounty program targeting the cold pipeline's communities.</td><td>Exa processing real production bookings, Lovable in technical trial, ≥5 community-built apps live from the bounty</td></tr>
           <tr><td class="row-label">Month 3<br><span style="color:var(--ink-faint);font-weight:400;">Wk 9–12</span></td><td>Production Deploy</td><td>Formalize Exa as a default, production, GMV-generating integration. Support Lovable through its technical trial toward production readiness. Keep 2–3 cold prospects advancing toward technical trial for Q2. Close the North Star Metric.</td><td>Exa live in production + Lovable in technical beta/trial, &gt;€150k combined GMV (&gt;€10k net revenue), ≥35% hotel mix</td></tr>
         </tbody>
@@ -320,6 +336,7 @@ flowchart TB
       <li><strong>No cold-templating Exa or Lovable.</strong> They get direct, relationship-specific outreach from Kevin/the CoS — not the cold sequence built for net-new platforms.</li>
       <li><strong>No paid acquisition</strong> (ads, sponsorships beyond the bounty program) before Month 2.</li>
       <li><strong>No per-platform API customization.</strong> One SDK, one MCP server.</li>
+      <li><strong>No uncapped support ops.</strong> Manual support time is hard-limited to 10 hrs/week in Phase 0 (see Part 2) — it does not flex upward to absorb GTM slack, and GTM does not flex downward to absorb support overflow.</li>
     </ul>
 
     <h3>Pivot Triggers</h3>
@@ -328,10 +345,11 @@ flowchart TB
         <thead><tr><th>Signal (by end of…)</th><th>Trigger</th></tr></thead>
         <tbody>
           <tr><td class="row-label">Month 1</td><td>Zero discovery calls booked from the <strong>cold motion</strong> after 25–30 contacts across multiple net-new platforms → rework the offer/asset, not the target list (Exa/Lovable unaffected — different motion entirely)</td></tr>
+          <tr><td class="row-label">Month 1</td><td><strong>Support ops exceeds the 10 hrs/week cap</strong> for 2 consecutive weeks → pull Phase 1's BPO forward immediately, regardless of booking count; the cap is a hard rule, not a target</td></tr>
           <tr><td class="row-label">Month 2</td><td><strong>Exa's production integration stalls with no clear technical blocker</strong> → escalate to Kevin immediately; a signed partner not converting to GMV is a red flag, not a normal sales-cycle delay</td></tr>
           <tr><td class="row-label">Month 2</td><td>Fewer than 3 community apps shipped → the friction is technical, not incentive-based; pause bounties and fix onboarding first</td></tr>
           <tr><td class="row-label">Month 3</td><td>On track for <strong>&lt;€75k combined GMV</strong> → extend Month 3 by 30 days rather than move goalposts</td></tr>
-          <tr><td class="row-label">Any month</td><td>Hotel mix trending &lt;25% with no correction path → escalate to <strong>both Kevin</strong> (agent prompt/UX may steer travelers toward flights over hotels) <strong>and Sébastien</strong> (supply-side inventory/pricing) — a joint product-and-supply problem</td></tr>
+          <tr><td class="row-label">Any month</td><td>Hotel mix trending &lt;25% with no correction path → escalate to <strong>both Kevin</strong> (agent prompt/UX may steer travelers toward flights over hotels) <strong>and Sébastien</strong> (supply-side inventory/pricing) — a joint product-and-supply problem, and one that directly shrinks the Emergency Rehousing Loss Reserve</td></tr>
         </tbody>
       </table>
     </div>
@@ -340,7 +358,7 @@ flowchart TB
   <section id="asset1" style="margin-top:56px;">
     <h3 style="margin-top:0;">📧 Embedded Shipped Asset 1 — Cold Outreach Email</h3>
     <div class="asset-meta">
-      <div><b>Target:</b> Head of DevRel / Head of BD at a <b>net-new, cold-tier platform</b> (e.g., Replit, Vercel AI, Bolt.new) — not Lovable (warm, gets a direct proposal) or Exa (already signed)</div>
+      <div><b>Target:</b> Head of DevRel / Head of BD at a <b>net-new, cold-tier platform</b> (e.g., Replit, Vercel AI, Bolt.new) — not Lovable (warm, gets the value-case proposal above instead) or Exa (already signed)</div>
       <div><b>Channel:</b> Email (LinkedIn as backup, 48h later if no reply)</div>
       <div><b>Goal:</b> Book a 20-minute discovery call to scope a joint MCP integration + developer bounty</div>
       <div><b>Signature note:</b> signed with a GTM-facing title, not "Chief of Staff" — a DevRel counterpart replies to a peer in developer partnerships, not a corporate title.</div>
@@ -388,19 +406,23 @@ GTM &amp; Developer Partnerships, Jinko
   <section class="part" id="part2">
     <div class="part-eyebrow">Part 2</div>
     <h2>Traveler Support Model</h2>
-    <p class="wide"><strong>The constraint:</strong> in-house, always-on European travel support is not viable on €10–15 flight commissions alone at scale — but scale isn't the Day 1 problem. The sequencing below is the actual plan: prove the failure modes by hand first, then build the system that handles them at volume.</p>
+    <p class="wide"><strong>The constraint:</strong> in-house, always-on European travel support is not viable on €10–15 flight commissions alone at scale — but scale isn't the Day 1 problem, and neither is it a blank check on the CoS's time. The sequencing below is the actual plan: prove the failure modes by hand, inside a hard bandwidth cap, then build the system that handles them at volume.</p>
 
-    <h3>Phase 0 — Manual Support (Bookings 1–100)</h3>
+    <h3>Phase 0 — Manual Support, Capped Not Open-Ended (Bookings 1–100)</h3>
+    <div class="callout north-star">
+      <span class="icon">⏱️</span>
+      <div><p><strong>Bandwidth cap: 10 hours/week, maximum, on support ops during Phase 0.</strong> This is a hard rule, not an aspiration — see Pivot Triggers.</p></div>
+    </div>
     <div class="phase">
       <div class="phase-num">0</div>
-      <p class="wide" style="margin:0;">For the first 50–100 bookings, I handle support personally — every contact, every edge case, logged by hand. This isn't a stopgap; it's how the Protocol Matrix and the deflection/BPO assumptions below get validated instead of guessed. Real traveler contacts at this stage tell us which of the 4 emergency cases actually happen, how often, and what a real resolution looks like — data no vendor RFP or industry benchmark can give us before we've booked a single trip. The hybrid model in Phase 1 launches once this data exists, not before.</p>
+      <p class="wide" style="margin:0;">Two design choices make the cap realistic instead of wishful. <strong>First, Tier 1 AI triage is live from Day 1</strong> — not something that ramps in later. Simple, automatable contacts (Protocol Matrix Scenario 1) are handled by the AI webhook immediately, at the same 35% Month-0 deflection rate used in the Financial Capacity Table below; the CoS never manually processes these. <strong>Second, manual time is spent on the escalated ~65%, and it's spent on qualitative failure analysis, not helpdesk throughput.</strong> At Month 0 volume (400 bookings, 60 contacts, 35% deflected), that's ~39 escalated contacts/month — about 9–10/week, each reviewed personally to build the real Protocol Matrix and BPO handoff spec, at roughly an hour each. That fits inside the cap with room to spare. If the cap is breached two weeks running, Phase 1's BPO is pulled forward immediately — regardless of whether the 100-booking threshold has been hit.</p>
     </div>
 
-    <h3>Phase 1 — Hybrid AI + BPO (Bookings 100+)</h3>
+    <h3>Phase 1 — Hybrid AI + BPO (Bookings 100+, or Sooner if the Cap Is Breached)</h3>
     <div class="diagram">
       <pre class="mermaid">
 flowchart LR
-    A["Traveler contact&lt;br&gt;(chat / email / webhook)"] --> B{"Tier 1: AI Agent&lt;br&gt;(LLM tool-calling)"}
+    A["Traveler contact&lt;br&gt;(chat / email / webhook)"] --> B{"Tier 1: AI Agent&lt;br&gt;(LLM tool-calling, live Day 1)"}
     B -- "deflected (ramping — see table)" --> C["Resolved — no human touch&lt;br&gt;€0.50/contact"]
     B -- "escalated" --> D["Tier 2: Specialized Offshore&lt;br&gt;Travel BPO"]
     D --> E["GDS-certified agent&lt;br&gt;(Amadeus/Sabre)&lt;br&gt;€8.00/ticket, blended"]
@@ -408,14 +430,14 @@ flowchart LR
       </pre>
     </div>
     <ul class="wide">
-      <li><strong>Tier 1 — AI Deflection:</strong> Every inbound contact hits an LLM agent first, with direct tool-calling access to booking status, PNR lookup, and rebooking APIs. Deflection is <strong>not</strong> assumed flat from Day 0 — it ramps as the model sees more real ticket volume from Phase 0 onward: <strong>35–40% at launch → 50% by Month 6 → 60% by Month 12.</strong></li>
+      <li><strong>Tier 1 — AI Deflection:</strong> Every inbound contact hits an LLM agent first, with direct tool-calling access to booking status, PNR lookup, and rebooking APIs. Deflection follows a realistic learning curve: <strong>35–40% at launch → 50% by Month 6 → 60%+ by Month 12.</strong></li>
       <li><strong>Tier 2 — Specialized Offshore Travel BPO:</strong> Escalations route to a GDS-certified BPO, priced <strong>per resolved ticket, not per hour.</strong> €8.00/ticket is the blended rate for standard escalations; critical incidents carry a separate reserve (see Protocol Matrix, Scenario 2).</li>
     </ul>
 
     <h3>Financial Capacity Table</h3>
     <div class="callout warn">
       <span class="icon">⚠️</span>
-      <div><p>All figures below are illustrative, invented planning variables — see the Sensitivity Audit for what's assumed vs. tested. "Net revenue" here is Jinko's own blended take per booking (flight fee + hotel margin, at ≥35% hotel mix), assumed at <strong>€25</strong> — deliberately <i>not</i> the traveler-facing GMV used as the Part 1 North Star; the two are kept separate for the same reason the North Star Metric now reports GMV and net revenue separately.</p></div>
+      <div><p>All figures below are illustrative, invented planning variables — see the Sensitivity Audit for what's assumed vs. tested. "Net revenue" here is Jinko's own blended take per booking (flight fee + hotel margin, at ≥35% hotel mix), assumed at <strong>€25</strong> — deliberately <i>not</i> the traveler-facing GMV used as the Part 1 North Star. This table covers <strong>support-ops cost only</strong>; the Emergency Rehousing Loss Reserve below is funded separately from hotel margin and does not change these figures.</p></div>
     </div>
     <div class="table-wrap">
       <table>
@@ -425,16 +447,16 @@ flowchart LR
           <tr><td class="row-label">Jinko net revenue (× €25)</td><td class="num">€10,000</td><td class="num">€50,000</td><td class="num">€100,000</td></tr>
           <tr><td class="row-label">Contact rate (assumed)</td><td class="num">15%</td><td class="num">15%</td><td class="num">15%</td></tr>
           <tr><td class="row-label">Total contacts</td><td class="num">60</td><td class="num">300</td><td class="num">600</td></tr>
-          <tr><td class="row-label">AI deflection rate (ramping)</td><td class="num">35%</td><td class="num">50%</td><td class="num">60%</td></tr>
+          <tr><td class="row-label">AI deflection rate (ramping, live Day 1)</td><td class="num">35%</td><td class="num">50%</td><td class="num">60%</td></tr>
           <tr><td class="row-label">Tier 1 (AI) cost @ €0.50</td><td class="num">€30</td><td class="num">€150</td><td class="num">€300</td></tr>
-          <tr><td class="row-label">Escalated to Tier 2 BPO</td><td class="num">39</td><td class="num">150</td><td class="num">240</td></tr>
+          <tr><td class="row-label">Escalated (Phase 0: manual ≤10h/wk · Phase 1: BPO)</td><td class="num">39</td><td class="num">150</td><td class="num">240</td></tr>
           <tr><td class="row-label">Tier 2 (BPO) cost @ €8.00</td><td class="num">€312</td><td class="num">€1,200</td><td class="num">€1,920</td></tr>
           <tr class="total"><td class="row-label">Total support cost</td><td class="num">€342</td><td class="num">€1,350</td><td class="num">€2,220</td></tr>
           <tr class="pct"><td class="row-label">% of net revenue</td><td class="num">3.4%</td><td class="num">2.7%</td><td class="num">2.2%</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="wide">This is the honest version of the model: support cost starts <strong>above</strong> the 2.5% long-run target while the AI is still learning (Month 0, subsidized in practice by Phase 0's manual groundwork) and <strong>converges below it by Month 12</strong> as deflection improves with real volume — not a flat ratio assumed from day one. Critical-incident costs (Protocol Matrix Scenario 2) are budgeted separately via a monthly emergency reserve and are not included in the €8.00 blended BPO rate above.</p>
+    <p class="wide">Support cost starts <strong>above</strong> the 2.5% long-run target while the AI is still learning (Month 0, offset in practice by Phase 0's capped manual groundwork instead of a paid BPO) and <strong>converges below it by Month 12</strong> as deflection improves with real volume.</p>
 
     <h3>Explicit Invented Variables &amp; Sensitivity Audit</h3>
     <div class="table-wrap">
@@ -454,7 +476,7 @@ flowchart LR
           <tr>
             <td class="row-label">BPO ticket cost</td><td class="num">€8.00</td><td>€15.00</td>
             <td><span class="pill med">Medium</span></td>
-            <td>At Month 12 volume, €15/ticket raises total to €3,900 (~3.9% of net revenue). Mitigation: multi-year BPO contract with volume-based step-downs before Month 6.</td>
+            <td>At Month 12 volume, €15/ticket raises total to €3,900 (~3.9% of net revenue). <strong>Mitigation: volume-tiered agreements with 30-day exit clauses and dynamic staffing scaling</strong> — not a multi-year lock-in, which would trade away the flexibility a Seed-stage company needs.</td>
           </tr>
           <tr>
             <td class="row-label">AI deflection cost</td><td class="num">€0.50</td><td>€5.00 (10x)</td>
@@ -477,12 +499,12 @@ flowchart LR
         <tbody>
           <tr>
             <td class="row-label">1</td><td><i>"Never got my booking reference"</i></td>
-            <td>100% automated — Tier 1 AI webhook fetches the PNR via email lookup and resends the confirmation instantly. No human touch.</td>
+            <td>100% automated — Tier 1 AI webhook fetches the PNR via email lookup and resends the confirmation instantly. No human touch, live from Day 1.</td>
             <td>Tier 1 (AI)</td><td class="num">&lt; 2 min</td>
           </tr>
           <tr>
             <td class="row-label">2</td><td><i>"11pm, hotel says they have no booking"</i></td>
-            <td>Priority routing bypasses AI triage — Tier 2 BPO calls the hotel desk directly; pushes a secondary payment or rehouses the guest via a pre-authorized emergency budget. Budgeted at <strong>€20–€25/critical incident</strong>, separate from the blended €8.00 rate.</td>
+            <td>Priority routing bypasses AI triage — Tier 2 BPO calls the hotel desk directly; pushes a secondary payment or rehouses the guest via a pre-authorized emergency budget. <strong>Two separate cost lines:</strong> the <strong>€20–€25 is the BPO's priority-handling fee</strong> (labor/coordination, paid regardless of outcome) — it does <strong>not</strong> cover a real room-rate delta (e.g., a $200 gap). That delta is paid from the Emergency Rehousing Loss Reserve, below.</td>
             <td>Tier 2, priority</td><td class="num">&lt; 3 min ack<br>&lt; 45 min resolution</td>
           </tr>
           <tr>
@@ -498,6 +520,15 @@ flowchart LR
         </tbody>
       </table>
     </div>
+
+    <h3>Emergency Rehousing Loss Reserve — Who Pays the Rate Delta</h3>
+    <p class="wide">The €20–25 Scenario-2 figure is a <i>handling fee</i>, not a claims budget — a founder asking "who pays the $200 gap to actually rehouse the guest" deserves a real answer, not a rounding error. That answer is a dedicated reserve, funded directly by the hotel-mix margin the GTM plan is already targeting.</p>
+    <ul class="wide">
+      <li><strong>Funded from:</strong> hotel net margin (€35/booking assumed), at ≥35% hotel mix — the same lever the Sensitivity Audit already flags as the model's highest-impact variable.</li>
+      <li><strong>Illustrative sizing:</strong> allocating <strong>1.5% of monthly hotel margin</strong> to the reserve — at Month 12 scale (4,000 bookings, ≥35% hotel mix ≈ 1,400 hotel bookings × €35 = ~€49,000 in monthly hotel margin) — yields <strong>~€735/month</strong>, enough to absorb roughly 3–4 significant rehousing deltas (~€150–200 each) without touching the support-ops budget above.</li>
+      <li><strong>Why it's separate:</strong> folding rate deltas into the €8.00 blended BPO rate would understate true incident cost and quietly erode margin on every normal ticket to cross-subsidize rare emergencies.</li>
+      <li><strong>Escalation:</strong> a rehousing delta that would exceed the reserve's current balance escalates immediately to Sébastien (supplier relationship) and Kevin (spend authorization) — not absorbed silently by the CoS.</li>
+    </ul>
   </section>
 
   <hr>
@@ -506,9 +537,10 @@ flowchart LR
     <div class="part-eyebrow">Summary</div>
     <h2>What This Delivers by Day 90</h2>
     <ol class="summary-list">
-      <li><span class="summary-num">1</span><span><strong>Exa live in production, Lovable in technical beta/trial</strong> — the signed partnership converted into real, measured GMV, and the warm hackathon relationship converted into a deeper integration. &gt;€150k combined GMV generating &gt;€10k net Jinko revenue, at ≥35% hotel mix, plus a cold pipeline of 5–8 net-new platforms feeding Q2.</span></li>
-      <li><span class="summary-num">2</span><span><strong>A support model proven by hand before it's automated</strong> — Phase 0 builds the real playbook on the first 50–100 bookings; Phase 1's hybrid AI + BPO cost converges to under 2.5% of net revenue by Month 12 as deflection ramps with real data, not an assumption made on Day 0.</span></li>
-      <li><span class="summary-num">3</span><span><strong>Founders in their lanes, by choice not by fix</strong> — Kevin delegates GTM execution and support ops to a direct-report CoS who extends his bandwidth; Sébastien gets structured escalation data instead of ad hoc fire drills, plus joint ownership with Kevin of any signal that traces back to product/UX rather than supply. Nothing here resolves founder friction — there isn't any to resolve.</span></li>
+      <li><span class="summary-num">1</span><span><strong>Exa live in production, Lovable in technical beta/trial</strong> — the signed partnership converted into real, measured GMV, and the warm hackathon relationship converted into a deeper integration backed by a concrete value case (MoR offload + risk-free template monetization). &gt;€150k combined GMV generating &gt;€10k net Jinko revenue, at ≥35% hotel mix, plus a cold pipeline of 5–8 net-new platforms feeding Q2.</span></li>
+      <li><span class="summary-num">2</span><span><strong>A support model proven by hand, inside a hard bandwidth cap</strong> — Phase 0 builds the real playbook on the first 50–100 bookings at ≤10 hrs/week, with AI triage live from Day 1 so the cap is realistic; Phase 1's hybrid AI + BPO cost converges to under 2.5% of net revenue by Month 12, hedged by flexible (not multi-year) BPO terms.</span></li>
+      <li><span class="summary-num">3</span><span><strong>Emergency costs that survive a founder's first hard question</strong> — the €20–25 BPO fee and the real rehousing rate delta are separately budgeted, with the delta funded transparently from the hotel-margin pool the GTM plan already targets.</span></li>
+      <li><span class="summary-num">4</span><span><strong>Founders in their lanes, by choice not by fix</strong> — Kevin delegates GTM execution and support ops to a direct-report CoS whose time is explicitly bounded; Sébastien gets structured escalation data instead of ad hoc fire drills, plus joint ownership with Kevin of any signal that traces back to product/UX, supply, or reserve funding.</span></li>
     </ol>
   </section>
 
@@ -517,7 +549,7 @@ flowchart LR
     <div><p><strong>Live shipped asset:</strong> the <code>jinko.com/mcp</code> landing page referenced in Part 1 is live for review → <a href="https://claude.ai/code/artifact/ba5106b7-4d5d-4ab8-81ed-fd2473fc76d3" target="_blank" rel="noopener">Jinko MCP — landing page preview ↗</a></p></div>
   </div>
 
-  <footer class="doc-foot">Jinko — Chief of Staff 90-Day Plan · v3, revised after founder review · prepared by Nina Tabaka</footer>
+  <footer class="doc-foot">Jinko — Chief of Staff 90-Day Plan · v4, stress-tested against 4 operational edge cases · prepared by Nina Tabaka</footer>
 
 </div>
 </body>
