@@ -1,18 +1,9 @@
 # Jinko — Chief of Staff 90-Day Plan & Support Model
-**Prepared for:** Kevin, Head of Product & GTM (direct debrief) — cc Sébastien, Co-Founder Supply/Tech
+**Prepared for:** Kevin, Co-Founder and co-CEO (Product & GTM) (direct debrief) — cc Sébastien, Co-Founder and co-CEO (Supply)
 **Prepared by:** Nina Tabaka, Candidate — Chief of Staff
-**Date:** September 8, 2026 · v4 — stress-tested against 4 operational edge cases
+**Date:** September 8, 2026 · v1 — initial submission for Co-Founder review
 
 > 📌 **How to read this document:** Part 0 is the operating model — how the Chief of Staff role extends founder bandwidth, inside an explicit, bounded time budget. Part 1 is the 90-day GTM plan, built on where Jinko's Builder Platform relationships actually stand today — signed, warm, and cold. Part 2 is the support model that scales *alongside* Part 1, with a hard cap on manual hours so it never crowds out GTM execution.
-
-### Stress-Test Log (v3 → v4)
-
-| # | Edge Case Challenged | Fix Applied |
-|---|---|---|
-| 1 | Phase 0 manual support (60 tickets/mo) collides with running cold outreach + Exa + Lovable simultaneously | Explicit **10 hrs/week CoS bandwidth cap** on support ops; Tier 1 AI triage live from Day 1 so manual time goes only to qualitative review of escalations, not raw volume |
-| 2 | "Multi-year BPO contract" mitigation contradicts staying lean at Seed | Replaced with **volume-tiered agreements + 30-day exit clauses + dynamic staffing scaling** |
-| 3 | "Default integration" ask of Lovable in 90 days has no stated value exchange | Added explicit **Lovable value proposition**: MoR offload + eliminates broken scraping flows + risk-free template monetization |
-| 4 | €20–25 critical-incident budget doesn't cover a real room-rate delta (e.g., a $200 gap) | Split into **BPO priority-handling fee (€20–25)** vs. a separate **Emergency Rehousing Loss Reserve**, funded from hotel-mix margin, covering the rate delta itself |
 
 ---
 
@@ -40,7 +31,7 @@ flowchart TB
         C3["Extends founder bandwidth on execution"]
     end
 
-    subgraph SEB["🔧 SÉBASTIEN — Supply & Tech"]
+    subgraph SEB["🔧 SÉBASTIEN — Supply"]
         direction TB
         S1["GDS / NDC & airline contracts"]
         S2["Supplier reliability & SLAs"]
